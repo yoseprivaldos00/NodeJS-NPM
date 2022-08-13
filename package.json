@@ -2,8 +2,14 @@
   "name": "nodejs-npm",
   "version": "1.0.0",
   "description": "belajar NodeJS NPM",
-  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./write": "./write.js"
+  },
   "scripts": {
+    "prestart": "echo \"Before Application Start\"",
+    "start": "node index.js",
+    "poststart": "echo \"After Aplication Start\" && exit 1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +21,6 @@
   "bugs": {
     "url": "https://github.com/yoseprivaldos00/NodeJS-NPM/issues"
   },
-  "homepage": "https://github.com/yoseprivaldos00/NodeJS-NPM#readme"
+  "homepage": "https://github.com/yoseprivaldos00/NodeJS-NPM#readme",
+  "type": "module"
 }
